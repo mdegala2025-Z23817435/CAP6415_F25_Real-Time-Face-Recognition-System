@@ -1,0 +1,52 @@
+#Week 1 Progress Report
+
+Project Title: Real-Time Face Recognition System
+Duration: Week 1 (November 3–9, 2025)
+
+# 1. Objectives for the Week
+
+Establish a clear understanding of the overall project goal and expected outcomes.
+
+Design the initial technical pipeline and workflow for the real-time face recognition system.
+
+Begin core development by implementing foundational modules for data collection, training, and recognition.
+
+# 2. Work Completed
+2.1 Module	Status	Description
+Project Setup & Overview	- [X] Completed	
+Defined project scope, objectives, and use cases (e.g., real-time identification, automated attendance). Selected core technologies — Python, OpenCV, and face recognition libraries (FaceNet/ArcFace).
+
+2.2 Data Gathering Script	- [X] 
+Completed	Created a Python script using OpenCV to capture training images via webcam. Structured dataset folders by user to ensure organized storage.
+
+2.3 Training Module	- [X] Completed	
+Implemented feature extraction and model training pipeline: detected faces, generated 128D embeddings, and trained a KNN/SVM classifier for recognition. Saved the model and encodings for reuse.
+
+2.4 Real-Time Recognition Module	- [X] 
+Implemented	Developed the real-time recognition loop capable of processing webcam input, performing detection, encoding, and matching at ~30 FPS with accurate labeling.
+
+2.5 Repository Structure	
+- [X] Organized	Organized project files into modules (create_dataset.py, train_model.py, recognizer.py) following modular and scalable code design principles.
+
+# 3. Technical Summary
+
+3.1 Training & Preparation Workflow: Completed offline training pipeline — including data collection, preprocessing, embedding generation, and model training.
+
+3.2 Real-Time Pipeline: Achieved functional real-time recognition using live webcam input and integrated visualization (bounding boxes and labels).
+
+3.3 Performance: Initial testing on local datasets demonstrates reliable recognition with minimal latency on CPU.
+
+# 4. Challenges & Solutions
+Challenge	Resolution
+Handling variations in lighting during dataset creation	Adjusted camera exposure and added basic histogram equalization preprocessing.
+Ensuring stable real-time FPS	Optimized OpenCV video capture parameters and limited frame resolution for smooth streaming.
+
+# 5. Outcomes
+A fully functional end-to-end face recognition prototype demonstrating live identification.
+Established a solid technical foundation for future optimization, benchmarking, and interface design.
+
+# 6. Next Week’s Focus
+Integrate improved face alignment to handle angled faces.
+Begin performance benchmarking and explore GPU acceleration.
+Start drafting evaluation metrics for model performance.
+Plan for an optional GUI interface for user-friendly interaction.
