@@ -1,4 +1,4 @@
-## Facial Embedding Learning and Gender Classification Using Triplet Networks on VGGFace2
+# Facial Embedding Learning and Gender Classification Using Triplet Networks on VGGFace2
 
 ## Abstract<br>
 This project implements a complete face-representation learning system using the VGGFace2 dataset and a MobileNet-based Siamese/Triplet architecture.
