@@ -56,7 +56,7 @@ The project includes full training scripts, evaluation tools, visualizations, re
 → Load & preprocess → Generate embedding → Predict gender + show graph → Retrieve similar images from DB → Add new faces automatically<br>
 
 # Visual Results
-## -----------------
+
 ## Confusion Matrix and ROC Curve<br>
 AUC = 0.996, nearly perfect.<br>
 <img width="940" height="380" alt="image" src="https://github.com/user-attachments/assets/83658303-8544-41c9-b75d-77567d52643a" /><br>
