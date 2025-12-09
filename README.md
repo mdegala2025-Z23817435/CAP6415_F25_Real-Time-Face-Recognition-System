@@ -3,7 +3,7 @@
 ## Abstract<br>
 This project implements a complete face-representation learning system using the VGGFace2 dataset and a MobileNet-based Siamese/Triplet architecture.
 
-##The goal is to solve two core problems:<br>
+## The goal is to solve two core problems:<br>
 1.	Learn discriminative face embeddings capable of identifying individuals using cosine similarity.
 2.	Build a scalable embedding-database system which:
     2.1 Stores embeddings for all known faces
@@ -13,15 +13,16 @@ This project implements a complete face-representation learning system using the
 Additionally, a lightweight gender classifier is built on top of the learned embeddings, achieving 97.6% accuracy and an AUC of 0.996, demonstrating the strength of the learned representations.
 The project includes full training scripts, evaluation tools, visualizations, reproducibility guarantees, and a complete inference pipeline.
 
-Pipeline Overview
-1. Dataset Preparation (VGGFace2)
+## Pipeline Overview<br>
+
+## 1. Dataset Preparation (VGGFace2)<br>
 •	Download via KaggleHub
 •	Filter identities with ≥20 images
 •	Clean corrupted files
 •	Split into train (80%) and val (20%)
 •	Apply augmentation + normalization
 
-2. Embedding Model – Triplet Learning
+## 2. Embedding Model – Triplet Learning<br>
 •	Backbone: MobileNetV2
 •	Output: 128-dim normalized embeddings
 •	Loss: TripletMarginLoss, margin = 0.3
@@ -29,47 +30,48 @@ Pipeline Overview
 •	5 training epochs
 •	Best checkpoint saved as mobilenet_triplet_vggface2.pt
 
-3. Identity Evaluation
+## 3. Identity Evaluation<br>
 •	Build gallery using 1 image per identity
 •	Compute embeddings for gallery & probes
 •	Identify using nearest-neighbor cosine similarity
 •	Achieved 81.21% identification accuracy
 
-
-4. Embedding Database System
+## 4. Embedding Database System<br>
 •	Stores embeddings for all images
 •	Query system:
-o	Computes embedding for new image
-o	Returns top-K similar images
-o	If similarity < threshold → marks as new person and adds to DB
+    o Computes embedding for new image
+    o Returns top-K similar images
+    o If similarity < threshold → marks as new person and adds to DB
 
-5. Gender Classification Layer
+## 5. Gender Classification Layer<br>
 •	Freeze embedding model
 •	Add a 128 → 2 classifier head
 •	Train on gender-labelled subset
 •	Achieved:
-o	97.6% accuracy
-o	AUC = 0.996
-o	Excellent class separation
+    o 97.6% accuracy
+    o AUC = 0.996
+    o Excellent class separation
 
-6. Inference Pipeline
+## 6. Inference Pipeline
 → Load & preprocess → Generate embedding → Predict gender + show graph → Retrieve similar images from DB → Add new faces automatically
 Visual Results
-Confusion Matrix and ROC Curve
-AUC = 0.996, nearly perfect.
- 
+
+## Confusion Matrix and ROC Curve<br>
+AUC = 0.996, nearly perfect.<br>
+<img width="940" height="380" alt="image" src="https://github.com/user-attachments/assets/83658303-8544-41c9-b75d-77567d52643a" />
+
 Gender Prediction Example
- 
+<img width="582" height="313" alt="image" src="https://github.com/user-attachments/assets/1c6f7c44-185c-4c8f-ad3f-a3771d9ef2d1" />
+<img width="612" height="323" alt="image" src="https://github.com/user-attachments/assets/6375a2d1-9bbd-400a-9788-03da26f12368" />
+<img width="582" height="315" alt="image" src="https://github.com/user-attachments/assets/5c5fddcd-a93a-4efe-93e6-36b2d70e32af" />
 
- 
-
-Reproducibility
+## Reproducibility
 To reproduce:
-pip install -r requirements.txt
-python src/triplet_training.py
-python src/gender_classifier.py
-python src/build_embedding_db.py
-python src/inference.py
+    o pip install -r requirements.txt
+    o python src/triplet_training.py
+    o python src/gender_classifier.py
+    o python src/build_embedding_db.py
+    o python src/inference.py
 
 The code is deterministic:
 •	Seed = 42
