@@ -1,0 +1,6 @@
+# Goal: Identity matching + embedding DB
+Built gallery & probe evaluation<br>
+Achieved 81.21% nearest-neighbor accuracy<br>
+Created DB storing embeddings for all images<br>
+Implemented similarity lookup<br>
+Added auto-enrollment for unseen images<br>
