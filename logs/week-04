@@ -1,0 +1,7 @@
+Goal: Gender classifier + visuals<br>
+Added 2-class classifier head<br>
+Trained with freeze backbone<br>
+Achieved 97.6% accuracy + AUC=0.996<br>
+Built upload UI for Colab<br>
+Added confusion matrix + ROC + bar charts<br>
+Prepared README + documentation for GitHub<br>
