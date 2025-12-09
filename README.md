@@ -55,7 +55,10 @@ The project includes full training scripts, evaluation tools, visualizations, re
 ## 6. Inference Pipeline<br>
 → Load & preprocess → Generate embedding → Predict gender + show graph → Retrieve similar images from DB → Add new faces automatically<br>
 
-# Visual Results
+# Visual Results<br>
+
+# Video Recording<br>
+https://drive.google.com/drive/folders/1GR18cEVMF-pPTPgApa1DZSx7PguV6OIR?usp=sharing <br>
 
 ## Confusion Matrix and ROC Curve<br>
 AUC = 0.996, nearly perfect.<br>
