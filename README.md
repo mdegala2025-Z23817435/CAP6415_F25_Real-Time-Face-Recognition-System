@@ -52,7 +52,7 @@ The project includes full training scripts, evaluation tools, visualizations, re
     o AUC = 0.996
     o Excellent class separation
 
-## 6. Inference Pipeline
+## 6. Inference Pipeline<br>
 → Load & preprocess → Generate embedding → Predict gender + show graph → Retrieve similar images from DB → Add new faces automatically
 Visual Results
 
@@ -60,12 +60,12 @@ Visual Results
 AUC = 0.996, nearly perfect.<br>
 <img width="940" height="380" alt="image" src="https://github.com/user-attachments/assets/83658303-8544-41c9-b75d-77567d52643a" />
 
-Gender Prediction Example
-<img width="582" height="313" alt="image" src="https://github.com/user-attachments/assets/1c6f7c44-185c-4c8f-ad3f-a3771d9ef2d1" />
-<img width="612" height="323" alt="image" src="https://github.com/user-attachments/assets/6375a2d1-9bbd-400a-9788-03da26f12368" />
-<img width="582" height="315" alt="image" src="https://github.com/user-attachments/assets/5c5fddcd-a93a-4efe-93e6-36b2d70e32af" />
+Gender Prediction Example<br>
+<img width="582" height="313" alt="image" src="https://github.com/user-attachments/assets/1c6f7c44-185c-4c8f-ad3f-a3771d9ef2d1" /><br>
+<img width="612" height="323" alt="image" src="https://github.com/user-attachments/assets/6375a2d1-9bbd-400a-9788-03da26f12368" /><br>
+<img width="582" height="315" alt="image" src="https://github.com/user-attachments/assets/5c5fddcd-a93a-4efe-93e6-36b2d70e32af" /><br>
 
-## Reproducibility
+## Reproducibility<br>
 To reproduce:
     o pip install -r requirements.txt
     o python src/triplet_training.py
@@ -73,14 +73,14 @@ To reproduce:
     o python src/build_embedding_db.py
     o python src/inference.py
 
-The code is deterministic:
+## The code is deterministic:<br>
 •	Seed = 42
 •	CUDNN deterministic flags set
 
-Hardware used: NVIDIA L4 GPU 
-Results from the TA machine should match closely (±1% accuracy).
-Folder Descriptions
-src/
+## Hardware used: NVIDIA L4 GPU<br>
+
+## Folder Descriptions<br>
+## src/<br>
 Contains modularized code:
 •	dataset_loader.py → load VGGFace2 subset
 •	embedding_model.py → MobileNet embedding network
@@ -89,11 +89,10 @@ Contains modularized code:
 •	embedding_database.py → Similarity search + auto-enrolment
 •	inference.py → Combined pipeline
 
-logs/
+## logs/<br>
 Contains weekly development logs.
 
-results/
-Contains:
+## results/ - Contains:<br>
 •	Accuracy metrics
 •	ROC curve
 •	Confusion matrix
