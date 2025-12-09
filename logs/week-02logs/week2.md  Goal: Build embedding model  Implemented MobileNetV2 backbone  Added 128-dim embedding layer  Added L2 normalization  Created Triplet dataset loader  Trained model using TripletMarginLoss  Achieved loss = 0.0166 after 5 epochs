@@ -1,0 +1,9 @@
+# logs/week2<br>
+
+## Goal: Build embedding model<br>
+## Implemented MobileNetV2 backbone<br>
+## adadded 128-dim embedding layer<br>
+## Added L2 normalization<br>
+## Created Triplet dataset loader<br>
+## Trained model using TripletMarginLoss<br>
+## Achieved loss = 0.0166 after 5 epochs<br>
